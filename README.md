@@ -17,6 +17,16 @@ project_name/
     setup.py
 ```
 
+
+## Todo
+
+1. get user data
+1. fill file content template
+1. create dir
+1. create files
+1. modify files
+
+
 ## Later improvements:
 - initialize a git repo, and place a `.gitignore`
 - setup a python virtual environment and place it under the root project_folder (suggest user to do `apt install python3-dev python3-venv`)
