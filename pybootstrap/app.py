@@ -1,10 +1,11 @@
 from pathlib import Path
 
 # Get these from user
-project_name = "foo"
-project_desc = "A foo app"
-target_loc = "/home/eric/Documents/"
-app_name = project_name  # name for your source dir
+project_name = input("Project name: ")
+project_desc = input("Short description: ")
+target_loc = input("Project location: ")
+app_name = input("App name (optional): ")  # name for your source dir
+app_name = project_name if not app_name else app_name
 
 # Directories
 proj_dir = Path(f"{target_loc}/{project_name}").resolve()
