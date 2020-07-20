@@ -1,4 +1,4 @@
-def setup_content(name, author, email, desc, url):
+def setup(name, desc):
     return f"""import setuptools
 
 with open("README.md") as fh:
@@ -7,12 +7,9 @@ with open("README.md") as fh:
 setuptools.setup(
     name="{name}",
     version="0.0.1",
-    author="{author}",
-    author_email="{emai}",
     description="{desc}",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="{url}",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -21,9 +18,10 @@ setuptools.setup(
 )"""
 
 
-def testpy_content(src_dir):
+def testpy(app_name):
     return f"""import unittest
-from {src_dir} import app
+from {app_name} import {app_name}
+
 
 class TestAddFunc(unittest.TestCase):
     def setUp(self):
@@ -35,4 +33,5 @@ class TestAddFunc(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()"""
+    unittest.main()
+"""
