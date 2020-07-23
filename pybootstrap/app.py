@@ -2,6 +2,7 @@ import re
 import file_content
 from pathlib import Path
 
+
 # Get info from user
 project_name = input("Project name (example: my_awesome_app): ")
 project_desc = input("Short description: ")
@@ -43,3 +44,21 @@ with setup_py.open("w") as fh:
     fh.write(file_content.setup(app_name, project_desc))
 with test_py.open("w") as fh:
     fh.write(file_content.testpy(app_name))
+
+
+# Create virtual environment
+v = input("Do you want to create a virtual environment? (y/n)")
+if v.lower() != "y":
+    print("No virtual environment will be created.")
+else:
+    try:
+        import venv
+        venv.create("./env", with_pip=True, clear=True)
+        print("Activate the environemnt by entering 'source ./env/bin/activate'")
+        print("You can upgrade pip by executing 'python -m pip install --upgrade pip'")
+        print("Recommended updates: 'pip install --upgrade setuptools wheel'")
+        print("Recommended package: 'sudo apt install python3-dev'")
+    except ImportError:
+        print("Unable to import venv, do you have python3-venv installed?")
+    except Exception as e:
+        print(f"Unable to create a virtual environment: {e}")

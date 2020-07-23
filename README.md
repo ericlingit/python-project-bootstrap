@@ -25,14 +25,8 @@ project_name/
 - [x] create dir
 - [x] create files
 - [x] modify files
+- [x] setup a python virtual environment and place it under the root project_folder (suggest user to do `apt install python3-dev`)
 
 
 ## Later improvements:
 - initialize a git repo, and place a `.gitignore`
-- setup a python virtual environment and place it under the root project_folder (suggest user to do `apt install python3-dev python3-venv`)
-- run pip updates for you:
-    ```
-    python -m pip install --upgrade pip
-    pip install --upgrade setuptools wheel
-    ```
-- install flake8 and place a config file
