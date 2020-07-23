@@ -1,5 +1,4 @@
 import re
-import os
 import sys
 import subprocess
 import file_content
@@ -15,8 +14,6 @@ app_name = project_name if not app_name else app_name
 
 if not target_loc.exists():
     sys.exit(f"Target location not found: {target_loc}")
-# else:
-#     os.chdir(target_loc)
 
 # Sanitize app name
 delim = re.compile("[ -]")
