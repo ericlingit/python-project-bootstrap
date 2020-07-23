@@ -20,11 +20,11 @@ project_name/
 
 ## Todo
 
-1. get user data
-1. fill file content template
-1. create dir
-1. create files
-1. modify files
+- [x] get user data
+- [x] fill file content template
+- [x] create dir
+- [x] create files
+- [x] modify files
 
 
 ## Later improvements:
