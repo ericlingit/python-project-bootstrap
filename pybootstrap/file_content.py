@@ -1,3 +1,8 @@
+GITIGNORE = """env/
+__pycache__/
+.vscode/
+"""
+
 def setup(name, desc):
     return f"""import setuptools
 
@@ -15,7 +20,8 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
     ],
     python_requires='>=3.6',
-)"""
+)
+"""
 
 
 def testpy(app_name):
@@ -34,4 +40,5 @@ class TestAddFunc(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
 """

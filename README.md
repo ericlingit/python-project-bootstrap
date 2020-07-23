@@ -26,7 +26,4 @@ project_name/
 - [x] create files
 - [x] modify files
 - [x] setup a python virtual environment and place it under the root project_folder (suggest user to do `apt install python3-dev`)
-
-
-## Later improvements:
-- initialize a git repo, and place a `.gitignore`
+- [x] initialize a git repo, and place a `.gitignore`

@@ -1,4 +1,7 @@
 import re
+import os
+import sys
+import subprocess
 import file_content
 from pathlib import Path
 
@@ -6,9 +9,14 @@ from pathlib import Path
 # Get info from user
 project_name = input("Project name (example: my_awesome_app): ")
 project_desc = input("Short description: ")
-target_loc = input("Project location (example: /home/john/Documents): ")
+target_loc = Path(input("Project location (example: /home/john/Documents): "))
 app_name = input("App name (optional): ")  # name for your source dir
 app_name = project_name if not app_name else app_name
+
+if not target_loc.exists():
+    sys.exit(f"Target location not found: {target_loc}")
+# else:
+#     os.chdir(target_loc)
 
 # Sanitize app name
 delim = re.compile("[ -]")
@@ -53,7 +61,7 @@ if v.lower() != "y":
 else:
     try:
         import venv
-        venv.create("./env", with_pip=True, clear=True)
+        venv.create(proj_dir/"env", with_pip=True, clear=True)
         print("Activate the environemnt by entering 'source ./env/bin/activate'")
         print("You can upgrade pip by executing 'python -m pip install --upgrade pip'")
         print("Recommended updates: 'pip install --upgrade setuptools wheel'")
@@ -62,3 +70,21 @@ else:
         print("Unable to import venv, do you have python3-venv installed?")
     except Exception as e:
         print(f"Unable to create a virtual environment: {e}")
+
+
+# Initialize a git repo
+g = input("Do you want to initialize a local git repository? (y/n)")
+if g.lower() != "y":
+    print("No git repo will be created.")
+else:
+    try:
+        subprocess.run(["git", "init", str(proj_dir)])
+    except Exception as e:
+        print(f"Unable to initialize a git repository: {e}")
+
+# Create .gitignore
+ign = proj_dir/".gitignore"
+ign.touch(exist_ok=True)
+
+with ign.open("w") as fh:
+    fh.write(file_content.GITIGNORE)
