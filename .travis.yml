@@ -8,7 +8,7 @@ script:
 - python -m unittest discover
 deploy:
   provider: pypi
-  username: __token__
+  username: ericlingit
   password:
     secure: FSLXdZFN/PaMdrD0AphTQ+c/8MXyAfMIwTnqIoUB5L6Iqv7FvRcf+KowR54peIqlkD87WfbZFKndMwOdfWha2fwPbLWLon0aqNixBJHLH0OM2+1nlmF3V7p1mFi0CWiCuu9al5i2D6574jGEIIDX3rp8JAM6jom4Jyf+fO22Q8p994EvQ4svWSBg7xYqIZ0TdJGAPX2eyD3lTimlg7BFMFRTMXArNiamFcjG1q1PxUSVVzkgm9RxG0nP+mwHxTv+5Gx0w05yE/tf9y1KyW+GvY1aB62e6l2XYvbJ87+La2CqussANtcqxG+JHLgwzxLvz/KZh20UPF75zr01HUUElM2uhIpBm29tJlTGhItdI7J03IMjSSQOHYYNOz0k8Egdo/ksL0E967XuZyBWikf9xOlxBQXfQLG75AXeLVxV3+wxgHfejSTiIz7x33e5U6cp68ogYXR0XGrpIiiDgrQJs8sumLUjc/NfURteHkUxGCNSfLi5PmrgE13pDXiJ5zBgAAF2igukmEPP5IWag2R8ACt9PX0E2MOKRNtYjhHpvSDVJDRNrb9QOnYgNFgdT0PHNU/EbQ92mLjFj+B+9EeCML04eptQrTeaiRErNBmf9QtC4b9lRxPokJTKXojwQBT4O6or1DyE5xUhU+uyiJJ//EUyeN1Fd5wQRe5MwawhEIM=
   server: https://test.pypi.org/legacy/
