@@ -1,8 +1,8 @@
 import re
 import sys
 import subprocess
-import file_content
 from pathlib import Path
+from . import file_content
 
 
 def main():
@@ -77,6 +77,7 @@ def main():
     else:
         try:
             subprocess.run(["git", "init", str(proj_dir)])
+            print("Don't forget to update git config!")
         except Exception as e:
             print(f"Unable to initialize a git repository: {e}")
 
