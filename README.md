@@ -43,3 +43,4 @@ Don't forget to update git config!
 - [x] modify files
 - [x] setup a python virtual environment and place it under the root project_folder (suggest user to do `apt install python3-dev`)
 - [x] initialize a git repo, and place a `.gitignore`
+- [ ] name candidate for pip: `newproj`, `pynewproj`, `projup`, `projectup`
