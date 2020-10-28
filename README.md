@@ -17,6 +17,22 @@ project_name/
     setup.py
 ```
 
+## Usage
+```bash
+eric@eric-pc:~/Documents/python-project-bootstrap$ python3 -m pybootstrap
+Project name (example: my_awesome_app): my_awesome_app
+Short description: Parse eml files into plain text     
+Project location (example: /home/john/Documents): /home/eric/Documents
+App name (optional): 
+Do you want to create a virtual environment? (y/n)y
+Activate the environemnt by entering 'source ./env/bin/activate'
+You can upgrade pip by executing 'python -m pip install --upgrade pip'
+Recommended updates: 'pip install --upgrade setuptools wheel'
+Recommended package: 'sudo apt install python3-dev'
+Do you want to initialize a local git repository? (y/n)y
+Initialized empty Git repository in /home/eric/Documents/my_awesome_app/.git/
+Don't forget to update git config!
+```
 
 ## Todo
 
